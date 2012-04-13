@@ -17,36 +17,29 @@
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container-fluid
+        .container
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") FlatspacePlugins
+          = link_to "Flatspace Plugins", root_url, class: 'brand'
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Plugin List", plugins_path
+              %li= link_to "+ Add Plugin", new_plugin_path
+              %li= link_to "About", ""
+              %li
+                - if user_signed_in?
+                  = link_to "Sign Out", sign_out_path
+                - else
+                  = link_to "Sign in with Facebook", "/auth/facebook"
 
-    .container-fluid
-
-      .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
-        .span9
-          = yield
-    
+    .container
+      .content
+        .row
+          .span12
+            = yield    
       %footer
-        %p &copy; Company 2012
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
+        %p created by Stefano Diem Benatti @ HeavenStudio
     = javascript_include_tag "application"
 

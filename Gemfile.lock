@@ -258,6 +258,7 @@ DEPENDENCIES
   launchy (~> 2.1.0)
   mongoid (~> 2.4.7)
   mongoid-rspec (~> 1.4.4)
+  omniauth
   omniauth-facebook (~> 1.2.0)
   rails (= 3.2.3)
   rspec-rails

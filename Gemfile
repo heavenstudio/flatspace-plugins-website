@@ -15,6 +15,7 @@ end
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'omniauth'
 
 gem 'devise',            '~> 2.0.4'
 gem 'omniauth-facebook', '~> 1.2.0'

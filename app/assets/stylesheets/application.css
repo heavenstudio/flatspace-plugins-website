@@ -8,7 +8,22 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap_and_overrides
  *= require_self
  *= require_tree .
- *= require bootstrap_and_overrides
 */
+h1 {
+  margin-bottom: 32px;
+}
+.form-actions {
+  background-color: white;
+  border: none;
+}
+footer {
+  background-color: #EEE;
+  padding: 20px 20px 10px;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -o-border-radius: 16px;
+}
