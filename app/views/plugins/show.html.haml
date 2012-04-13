@@ -2,21 +2,13 @@
 %h1=t '.title', :default => model_class.model_name.human
 
 %p
-  %strong= model_class.human_attribute_name(:_type) + ':'
-  %br
-  = @plugin._type
-%p
-  %strong= model_class.human_attribute_name(:_id) + ':'
-  %br
-  = @plugin._id
-%p
   %strong= model_class.human_attribute_name(:title) + ':'
   %br
   = @plugin.title
 %p
   %strong= model_class.human_attribute_name(:description) + ':'
   %br
-  = @plugin.description
+  = simple_format @plugin.description
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), plugins_path, :class => 'btn'

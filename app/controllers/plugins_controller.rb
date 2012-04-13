@@ -34,6 +34,7 @@ class PluginsController < ApplicationController
 
   def create
     @plugin = Plugin.new(params[:plugin])
+    @plugin.user = current_user
 
     respond_to do |format|
       if @plugin.save

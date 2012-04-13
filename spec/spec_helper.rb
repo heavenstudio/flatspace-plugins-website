@@ -24,7 +24,6 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include Mongoid::Matchers
-  config.include Devise::TestHelpers, type: :controller
   
   config.before(:suite) do
     DatabaseCleaner.orm      = :mongoid

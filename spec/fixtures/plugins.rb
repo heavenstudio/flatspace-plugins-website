@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :plugin do
     title "MyString"
     description "MyString"
+    user { FactoryGirl.create(:user) }
   end
 end

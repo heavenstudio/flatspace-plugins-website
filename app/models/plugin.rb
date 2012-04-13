@@ -3,6 +3,7 @@ class Plugin
   include Mongoid::Timestamps
   field :title,       type: String
   field :description, type: String
+  belongs_to :user
   
-  validates_presence_of :title, :description
+  validates_presence_of :title, :description, :user
 end
