@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Plugin do
   it { should have_fields(:title, :description).of_type(String) }
+  it { should have_fields(:created_at, :updated_at).of_type(Time) }
   it { should validate_presence_of(:title) }
   it { should validate_presence_of(:description) }
   
